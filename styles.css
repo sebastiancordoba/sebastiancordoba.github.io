@@ -27,6 +27,9 @@
 	margin: 0 auto;
 }
 @media (min-width: 768px) {
+	.resume-heading {
+		text-align: center;
+	}
 	.resume-content {
 		display: flex;
 		flex-wrap: wrap;
