@@ -45,3 +45,15 @@
 		margin-left: 40px;
 	}
 }
+@media (max-width: 767px) {
+	.resume-content {
+		display: block;
+		text-align: center;
+	}
+	.resume-text {
+		margin-bottom: 30px;
+	}
+	.resume-image {
+		margin-bottom: 30px;
+	}
+}
