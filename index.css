@@ -26,6 +26,22 @@ body {
     flex-direction: column;
 }
 
+.background-birds {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image.png');
+    background-size: cover;
+    background-position: top center;
+    filter: invert(1) contrast(1.5) brightness(0.4);
+    opacity: 0.12;
+    z-index: -1;
+    pointer-events: none;
+    mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
+}
+
 /* Grain Effect Overlay */
 body::before {
     content: "";
