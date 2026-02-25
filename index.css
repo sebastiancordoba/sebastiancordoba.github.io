@@ -4,8 +4,6 @@
     --text-muted: #666666;
     --accent: #ffffff;
     --font-mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
-    --terminal-green: #00ff41;
-    /* Classic Matrix/Linux green if needed, but white is cleaner for zen */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap');
@@ -68,11 +66,7 @@ h1 {
     margin-bottom: 1rem;
 }
 
-.subtitle {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    max-width: 500px;
-}
+
 
 .nav-bar {
     padding: 2rem;
