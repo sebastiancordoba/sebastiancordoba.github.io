@@ -3,10 +3,10 @@
     --text-primary: #ffffff;
     --text-muted: #666666;
     --accent: #ffffff;
-    --font-mono: 'IBM Plex Mono', 'JetBrains Mono', monospace;
+    --font-main: 'Outfit', sans-serif;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
 * {
     margin: 0;
@@ -14,51 +14,15 @@
     box-sizing: border-box;
 }
 
-.terminal-theme,
-.terminal-theme * {
-    cursor: crosshair;
-}
-
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
-    font-family: var(--font-mono);
+    font-family: var(--font-main);
     line-height: 1.6;
     overflow-x: hidden;
     height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-.terminal-theme .background-birds {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('image.png');
-    background-size: cover;
-    background-position: top center;
-    filter: invert(1) contrast(1.5) brightness(0.4);
-    opacity: 0.12;
-    z-index: -1;
-    pointer-events: none;
-    mask-image: linear-gradient(to bottom, black 0%, transparent 60%);
-}
-
-/* Grain Effect Overlay */
-.terminal-theme::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgo8ZmlsdGVyIGlkPSdub2lzZSc+CjxmZVR1cmJ1bGVuY2UgdHlwZT0nZnJhY3RhbE5vaXNlJyBiYXNlRnJlcXVlbmN5PScwLjY1JyBudW1PY3RhdmVzPSczJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+CjwvZmlsdGVyPgo8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWx0ZXI9J3VybCgjbm9pc2UpJyBvcGFjaXR5PScwLjInLz4KPC9zdmc+');
-    z-index: 9999;
-    opacity: 0.35;
-    mix-blend-mode: overlay;
 }
 
 .container {
@@ -85,8 +49,6 @@ h1 {
     font-weight: 400;
     margin-bottom: 1rem;
 }
-
-
 
 .nav-bar {
     padding: 2rem;
@@ -148,56 +110,6 @@ main {
 .project-card p {
     font-size: 0.8rem;
     color: var(--text-muted);
-}
-
-.terminal-theme .cursor {
-    display: inline-block;
-    width: 8px;
-    height: 18px;
-    background-color: var(--text-primary);
-    vertical-align: middle;
-    margin-left: 5px;
-    animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-
-    0%,
-    100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0;
-    }
-}
-
-/* Scanline Effect */
-.terminal-theme::after {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%,
-            rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg,
-            rgba(255, 0, 0, 0.06),
-            rgba(0, 255, 0, 0.02),
-            rgba(0, 0, 255, 0.06));
-    background-size: 100% 4px, 3px 100%;
-    z-index: 10000;
-}
-
-@keyframes scanline {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(4px);
-    }
 }
 
 footer {
