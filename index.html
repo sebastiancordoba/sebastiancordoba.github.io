@@ -1,61 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebastian Cordoba | Digital Presence</title>
-    <meta name="description" content="Personal portfolio and workspace of Sebastian Cordoba. Exploring the intersection of design and technology.">
-    
-    <!-- Google Fonts -->
+    <title>Sebastián Córdoba | Digital Artist & Developer</title>
+    <meta name="description"
+        content="Portfolio of Sebastián Córdoba. Minimalist design, high precision technical work.">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <div class="gradient-bg"></div>
 
+<body>
     <nav class="nav-bar">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <div class="logo">S.C.</div>
+        <div class="nav-links">
+            <a href="#work">Work</a>
+            <a href="mailto:hi@sebastiancordoba.com">Contact</a>
+        </div>
     </nav>
 
-    <header id="home">
-        <div class="container hero-content">
-            <h1>Sebastian Cordoba</h1>
-            <p class="subtitle">Architecting digital experiences with precision and passion. Explorer of AI, Web Technologies, and Minimalist Design.</p>
-            <a href="#projects" class="cta-button">Explore My Work</a>
-        </div>
+    <header class="container">
+        <h1>Sebastián Córdoba</h1>
+        <p class="subtitle">Focusing on the intersection of minimalist aesthetics and functional complexity.</p>
     </header>
 
-    <main id="projects" class="container">
-        <div class="grid">
-            <div class="card">
-                <h3>Innovation</h3>
-                <p>Pushing the boundaries of what's possible with modern web frameworks and AI integration.</p>
-            </div>
-            <div class="card">
-                <h3>Design</h3>
-                <p>Clean, functional, and aesthetically pleasing interfaces that put the user first.</p>
-            </div>
-            <div class="card">
-                <h3>Strategy</h3>
-                <p>Bridging the gap between complex technical requirements and business goals.</p>
-            </div>
+    <main id="work" class="container">
+        <div class="project-section">
+            <a href="https://sebastiancordoba.github.io/web-pdf/" class="project-card">
+                <h3>Web-PDF</h3>
+                <p>A high-performance PDF manipulation tool built for the modern web.</p>
+                <span class="link-arrow">→</span>
+            </a>
+
+            <a href="#" class="project-card">
+                <h3>Selected Works</h3>
+                <p>Curated list of technical implementations and design experiments.</p>
+                <span class="link-arrow">→</span>
+            </a>
         </div>
     </main>
 
-    <footer style="padding: 4rem 0; text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
-        <div class="container">
-            <p>&copy; 2024 Sebastian Cordoba. Built with &hearts; and AI.</p>
-        </div>
+    <footer class="container">
+        <p>&copy; 2024 Sebastián Córdoba. All rights reserved.</p>
     </footer>
 
     <script>
-        // Simple scroll reveal or smooth scroll can be added here
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -66,4 +60,5 @@
         });
     </script>
 </body>
+
 </html>
