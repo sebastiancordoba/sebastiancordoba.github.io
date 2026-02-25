@@ -12,6 +12,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.terminal-theme,
+.terminal-theme * {
     cursor: crosshair;
 }
 
@@ -26,7 +30,7 @@ body {
     flex-direction: column;
 }
 
-.background-birds {
+.terminal-theme .background-birds {
     position: fixed;
     top: 0;
     left: 0;
@@ -43,7 +47,7 @@ body {
 }
 
 /* Grain Effect Overlay */
-body::before {
+.terminal-theme::before {
     content: "";
     position: fixed;
     top: 0;
@@ -146,7 +150,7 @@ main {
     color: var(--text-muted);
 }
 
-.cursor {
+.terminal-theme .cursor {
     display: inline-block;
     width: 8px;
     height: 18px;
@@ -169,7 +173,7 @@ main {
 }
 
 /* Scanline Effect */
-body::after {
+.terminal-theme::after {
     content: "";
     position: fixed;
     top: 0;
