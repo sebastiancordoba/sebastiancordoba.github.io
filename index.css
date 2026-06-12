@@ -94,22 +94,52 @@ main {
     color: inherit;
     border: 1px solid #222;
     padding: 1.5rem;
-    transition: border-color 0.2s, transform 0.1s;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    position: relative;
+    background-color: transparent;
 }
 
 .project-card:hover {
     border-color: var(--text-primary);
+    background-color: var(--text-primary);
+    color: var(--bg-color);
+    transform: translateX(10px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
 }
 
 .project-card h3 {
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.project-card h3::before {
+    content: "> ";
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover h3 {
+    transform: translateX(25px);
+}
+
+.project-card:hover h3::before {
+    left: -25px;
+    opacity: 1;
 }
 
 .project-card p {
     font-size: 0.8rem;
     color: var(--text-muted);
+    transition: color 0.3s ease;
+}
+
+.project-card:hover p {
+    color: #222;
 }
 
 footer {

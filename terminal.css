@@ -7,6 +7,22 @@
     font-family: 'IBM Plex Mono', 'JetBrains Mono', monospace !important;
 }
 
+.terminal-theme {
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 255, 255, 0.15);
+    animation: textFlicker 6s infinite;
+}
+
+@keyframes textFlicker {
+    0% { opacity: 0.98; }
+    5% { opacity: 0.8; }
+    10% { opacity: 0.95; }
+    15% { opacity: 1; }
+    50% { opacity: 0.98; }
+    55% { opacity: 0.9; }
+    60% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
 .terminal-theme .background-birds {
     position: fixed;
     top: 0;
@@ -54,6 +70,12 @@
             rgba(0, 0, 255, 0.06));
     background-size: 100% 4px, 3px 100%;
     z-index: 10000;
+    animation: scanlines 10s linear infinite;
+}
+
+@keyframes scanlines {
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 0 100vh, 0 0; }
 }
 
 .terminal-theme .cursor {

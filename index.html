@@ -22,14 +22,14 @@
 
     <header class="container">
         <h1>
-            <span>Sebastián Córdoba</span><span class="cursor"></span>
+            <span id="hero-text"></span><span id="hero-cursor" class="cursor"></span>
         </h1>
 
     </header>
 
     <main id="work" class="container">
         <div class="project-section">
-            <div class="prompt">// list --projects</div>
+            <div class="prompt"><span id="prompt-text"></span><span id="prompt-cursor" class="cursor" style="display:none;"></span></div>
 
             <a href="https://sebastiancordoba.github.io/web-pdf/" class="project-card">
                 <h3>01_WEB-PDF</h3>
@@ -76,6 +76,33 @@
                 });
             });
         });
+
+        // Typing Effect
+        const heroText = "Sebastián Córdoba";
+        const heroElement = document.getElementById('hero-text');
+        const heroCursor = document.getElementById('hero-cursor');
+        
+        const promptText = "// list --projects";
+        const promptElement = document.getElementById('prompt-text');
+        const promptCursor = document.getElementById('prompt-cursor');
+
+        async function typeText(element, text, speed = 80) {
+            for (let i = 0; i < text.length; i++) {
+                element.innerHTML += text.charAt(i);
+                await new Promise(r => setTimeout(r, speed + Math.random() * 50));
+            }
+        }
+
+        async function initTyping() {
+            await new Promise(r => setTimeout(r, 500)); // Initial delay
+            await typeText(heroElement, heroText, 80);
+            heroCursor.style.display = 'none';
+            promptCursor.style.display = 'inline-block';
+            await new Promise(r => setTimeout(r, 300)); // Pause before next
+            await typeText(promptElement, promptText, 50);
+        }
+
+        initTyping();
     </script>
 </body>
 
