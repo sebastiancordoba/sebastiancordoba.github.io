@@ -82,10 +82,14 @@ main {
 }
 
 .project-section {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
     gap: 1.5rem;
     margin-top: 4rem;
+}
+
+.project-section .prompt {
+    grid-column: 1 / -1;
 }
 
 .project-card {
@@ -103,8 +107,24 @@ main {
     border-color: var(--text-primary);
     background-color: var(--text-primary);
     color: var(--bg-color);
-    transform: translateX(10px);
+    transform: translateY(-4px);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.project-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    margin-bottom: 1.25rem;
+    border: 1px solid #1a1a1a;
+    opacity: 0.55;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover img {
+    opacity: 1;
 }
 
 .project-card h3 {
