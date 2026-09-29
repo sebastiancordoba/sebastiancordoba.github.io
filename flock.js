@@ -16,7 +16,7 @@
         canvas.height = height * dpr;
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-        const count = Math.round(Math.min(180, Math.max(60, (width * height) / 9000)));
+        const count = Math.round(Math.min(300, Math.max(100, (width * height) / 5500)));
         while (birds.length < count) birds.push(makeBird());
         birds.length = count;
     }
